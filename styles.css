@@ -1,0 +1,72 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--color-red);
+    color: var(--color-yellow);
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-red);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--color-yellow);
+}
+
+p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Link Styles */
+a {
+    color: var(--color-red);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-red);
+    color: var(--color-yellow);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

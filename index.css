@@ -20,6 +20,11 @@ html, body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-yellow);
+}
+
 .body-image {
     background-image: url('./img/background.PNG');
     background-position: center;
@@ -45,7 +50,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-yellow); /* Change background on hover */
+  background-color: var(--color-navy); /* Change background on hover */
   color: var(--color-red); /* Change text color on hover */
   transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
