@@ -33,6 +33,29 @@ body {
   font-family: Arial, sans-serif;
 }
 
+button {
+  background-color: var(--color-red); /* Button background color */
+  color: var(--color-yellow); /* Text color */
+  padding: 12px 24px; /* Vertical and horizontal padding */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover/active states */
+}
+
+button:hover {
+  background-color: var(--color-yellow); /* Change background on hover */
+  color: var(--color-red); /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+button:active {
+  background-color: var(--color-green); /* Change background on click */
+  transform: scale(0.98); /* Shrink the button when clicked */
+}
+
+
 
 /* ================
 Header and Nav Menu
@@ -132,8 +155,9 @@ nav a:hover {
 Footer
 ====== */
 footer {
-    background-color: var(--color-red);
-    color: var(--color-yellow);
-    text-align: center;
-    padding: 10px;
-  }
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Push the footer to the bottom */
+}
