@@ -65,14 +65,20 @@ About Us
 Our Mission
 =========== */
 .our-mission{
-    background-color: var(--color-yellow);
+    background-color: var(--color-green);
 }
+.our-mission h2{
+    border-bottom: 2px solid var(--color-navy);
+    color: var(--color-yellow);
+}
+
+
 
 /* ======
 Our Story
 ========= */
 .our-story{
-    background-color: white;
+    background-color: var(--color-yellow);
     width: 100%;
     height: 100%;
 }
