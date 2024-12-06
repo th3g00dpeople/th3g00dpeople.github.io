@@ -2,7 +2,7 @@
 Root Colors
 =========== */
 :root {
-  --color-yellow: #F2D492;
+  --color-yellow: #f7dfae;
   --color-blue: #BADEFC;
   --color-green: #56876D;
   --color-red: #D95D39;
@@ -20,9 +20,12 @@ Root Colors
   
   .body-image {
     background-image: url('./img/index.png'); /* Replace with your background image */
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover; /* Makes sure the image covers the entire element */
+    background-position: center center; /* Centers the image in the element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    
   }
+  
   
   /* Background and text colors */
   body {
@@ -45,7 +48,7 @@ Root Colors
   /* Container for Buttons */
   .button-container {
     position: relative;
-    width: 1000px; /* Adjust size as needed */
+    width: 1200px; /* Adjust size as needed */
     height: 800px; /* Adjust size as needed */
     border: 0px solid red; /* Red border for the container */
     border-radius: 10px; /* Optional: Rounded corners for the container */
@@ -78,17 +81,17 @@ Root Colors
   /* Positioning for Each Button */
   .left1 {
     top: 26%; /* Adjust top positioning */
-    left: 15%; /* Adjust left positioning */
+    left: 18%; /* Adjust left positioning */
   }
 
   .right1 {
     top: 38%; /* Adjust top positioning */
-    right: 15%; /* Adjust right positioning */
+    right: 0%; /* Adjust right positioning */
   }
 
   .right2 {
     bottom: 30%; /* Adjust bottom positioning */
-    right: 21%; /* Adjust right positioning */
+    right: 5%; /* Adjust right positioning */
   }
 
   /* ================

@@ -14,12 +14,6 @@
     color: var(--color-yellow);
   }
   
-  .body-image {
-    background-image: url('./img/index.png'); /* Replace with your background image */
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
   /* Background and text colors */
   body {
     background-color: var(--color-yellow);
