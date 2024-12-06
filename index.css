@@ -19,7 +19,7 @@ Root Colors
   }
   
   .body-image {
-    background-image: url('./img/index.jpg'); /* Replace with your background image */
+    background-image: url('./img/index.png'); /* Replace with your background image */
     background-size: cover; /* Makes sure the image covers the entire element */
     background-position: center center; /* Centers the image in the element */
     background-repeat: no-repeat; /* Prevents the image from repeating */
