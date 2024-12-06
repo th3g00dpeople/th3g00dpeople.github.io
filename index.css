@@ -9,160 +9,178 @@ Root Colors
   --color-navy: #283845;
 }
 
-/* ===========
-Default Styles
-============== */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: var(--color-yellow);
-}
-
-.body-image {
-    background-image: url('./img/background.PNG');
+  
+  /* ===========
+  Default Styles
+  ============== */
+  a {
+    text-decoration: none;
+    color: var(--color-yellow);
+  }
+  
+  .body-image {
+    background-image: url('./img/index.png'); /* Replace with your background image */
     background-position: center;
     background-repeat: no-repeat;
-}
+  }
+  
+  /* Background and text colors */
+  body {
+    background-color: var(--color-yellow);
+    color: var(--color-navy);
+    font-family: Arial, sans-serif;
+  }
 
-/* Background and text colors */
-body {
-  background-color: var(--color-yellow);
-  color: var(--color-navy);
-  font-family: Arial, sans-serif;
-}
+  /* ==========
+  Index content
+  ============= */
+  .index{
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for centralizing the container */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+  }
 
-button {
-  background-color: var(--color-red); /* Button background color */
-  color: var(--color-yellow); /* Text color */
-  padding: 12px 24px; /* Vertical and horizontal padding */
-  font-size: 16px; /* Font size */
-  border: none; /* Remove border */
-  border-radius: 8px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease; /* Smooth transition for hover/active states */
-}
+  /* Container for Buttons */
+  .button-container {
+    position: relative;
+    width: 1000px; /* Adjust size as needed */
+    height: 800px; /* Adjust size as needed */
+    border: 0px solid red; /* Red border for the container */
+    border-radius: 10px; /* Optional: Rounded corners for the container */
+  }
 
-button:hover {
-  background-color: var(--color-navy); /* Change background on hover */
-  color: var(--color-red); /* Change text color on hover */
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
-}
+  /* General Styling for Buttons */
+  .dotted-button {
+    position: absolute; /* Absolute positioning for precise placement */
+    background: none;
+    border: 2px dashed #008080; /* Customize border color */
+    border-radius: 50%; /* Circular buttons */
+    width: 150px; /* Adjust button size */
+    height: 150px;
+    color: #008080; /* Text color */
+    text-align: center;
+    line-height: 150px; /* Center text vertically */
+    font-size: 16px; /* Text size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s, border-color 0.3s;
+  }
 
-button:active {
-  background-color: var(--color-green); /* Change background on click */
-  transform: scale(0.98); /* Shrink the button when clicked */
-}
+  /* Hover Effects for Buttons */
+  .dotted-button:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    color: #ff4500; /* Text color on hover */
+    border-color: #ff4500; /* Border color on hover */
+  }
 
+  /* Positioning for Each Button */
+  .left1 {
+    top: 26%; /* Adjust top positioning */
+    left: 3%; /* Adjust left positioning */
+  }
 
+  .right1 {
+    top: 38%; /* Adjust top positioning */
+    right: 15%; /* Adjust right positioning */
+  }
 
-/* ================
-Header and Nav Menu
-=================== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--color-yellow);
-  color: var(--color-navy);
-  position: relative; /* Ensure it stays above the menu */
-  z-index: 10; /* Make sure the header stays above the menu */
-}
+  .right2 {
+    bottom: 30%; /* Adjust bottom positioning */
+    right: 21%; /* Adjust right positioning */
+  }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.green {
-  color: var(--color-green);
-}
-
-.red {
-  color: var(--color-red);
-}
-
-/* Menu icon styling */
-.menu-icon {
-  font-size: 32px;
-  cursor: pointer;
-  color: var(--color-red);
-  transition: transform 0.2s ease;
-}
-
-.menu-icon:hover {
-  transform: scale(1.1);
-  color: var(--color-green);
-}
-
-/* Add styles for the menu icon in the cross state */
-.menu-icon.cross {
-  color: var(--color-red); /* Optional: change the color of the cross */
-  font-size: 32px;
-}
-
-/* Navigation menu */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-yellow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.4s ease-in-out;
-  z-index: 9; /* Lower z-index for the menu */
-}
-
-nav ul {
-  list-style: none;
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-nav li {
-  margin: 20px 0;
-}
-
-nav a {
-  text-decoration: none;
-  font-size: 24px;
-  color: var(--color-red);
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--color-green);
-}
-
-/* Show/Hide menu */
-.hidden {
-  transform: scaleY(0);
-}
-
-.visible {
-  transform: scaleY(1);
-}
-
-/* ===
-Footer
-====== */
-footer {
-  background-color: var(--color-red);
-  color: var(--color-yellow);
-  text-align: center;
-  padding: 10px;
-  margin-top: auto; /* Push the footer to the bottom */
-}
+  /* ================
+  Header and Nav Menu
+  =================== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-yellow);
+    color: var(--color-navy);
+    position: relative; /* Ensure it stays above the menu */
+    z-index: 10; /* Make sure the header stays above the menu */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .green {
+    color: var(--color-green);
+  }
+  
+  .red {
+    color: var(--color-red);
+  }
+  
+  /* Menu icon styling */
+  .menu-icon {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--color-red);
+    transition: transform 0.2s ease;
+  }
+  
+  .menu-icon:hover {
+    transform: scale(1.1);
+    color: var(--color-green);
+  }
+  
+  /* Add styles for the menu icon in the cross state */
+  .menu-icon.cross {
+    color: var(--color-red); /* Optional: change the color of the cross */
+    font-size: 32px;
+  }
+  
+  /* Navigation menu */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease-in-out;
+    z-index: 9; /* Lower z-index for the menu */
+  }
+  
+  nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  nav li {
+    margin: 20px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--color-red);
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: var(--color-green);
+  }
+  
+  /* Show/Hide menu */
+  .hidden {
+    transform: scaleY(0);
+  }
+  
+  .visible {
+    transform: scaleY(1);
+  }

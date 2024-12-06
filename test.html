@@ -1,63 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power to the Moms</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS stylesheet -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Buttons with Background</title>
+  <style>
+    /* General Body Styling */
+    body {
+      background-image: url('./img/index.png'); /* Replace with your background image */
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+    }
+
+    .index{
+      margin: 0;
+      padding: 0;
+      display: flex; /* Flexbox for centralizing the container */
+      justify-content: center; /* Horizontal centering */
+      align-items: center; /* Vertical centering */
+    }
+
+    /* Container for Buttons */
+    .button-container {
+      position: relative;
+      width: 1000px; /* Adjust size as needed */
+      height: 800px; /* Adjust size as needed */
+      border: 0px solid red; /* Red border for the container */
+      border-radius: 10px; /* Optional: Rounded corners for the container */
+    }
+
+    /* General Styling for Buttons */
+    .dotted-button {
+      position: absolute; /* Absolute positioning for precise placement */
+      background: none;
+      border: 2px dashed #008080; /* Customize border color */
+      border-radius: 50%; /* Circular buttons */
+      width: 150px; /* Adjust button size */
+      height: 150px;
+      color: #008080; /* Text color */
+      text-align: center;
+      line-height: 150px; /* Center text vertically */
+      font-size: 16px; /* Text size */
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    /* Hover Effects for Buttons */
+    .dotted-button:hover {
+      transform: scale(1.1); /* Slight zoom on hover */
+      color: #ff4500; /* Text color on hover */
+      border-color: #ff4500; /* Border color on hover */
+    }
+
+    /* Positioning for Each Button */
+    .left1 {
+      top: 26%; /* Adjust top positioning */
+      left: 3%; /* Adjust left positioning */
+    }
+
+    .right1 {
+      top: 38%; /* Adjust top positioning */
+      right: 15%; /* Adjust right positioning */
+    }
+
+    .right2 {
+      bottom: 30%; /* Adjust bottom positioning */
+      right: 21%; /* Adjust right positioning */
+    }
+
+    /* ================
+Header and Nav Menu
+=================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-yellow);
+  color: var(--color-navy);
+  position: relative; /* Ensure it stays above the menu */
+  z-index: 10; /* Make sure the header stays above the menu */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.red {
+  color: var(--color-red);
+}
+
+/* Menu icon styling */
+.menu-icon {
+  font-size: 40px;
+  cursor: pointer;
+  color: var(--color-red);
+  transition: transform 0.2s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+  color: var(--color-green);
+}
+
+/* Add styles for the menu icon in the cross state */
+.menu-icon.cross {
+  color: var(--color-red); /* Optional: change the color of the cross */
+  font-size: 32px;
+}
+
+/* Navigation menu */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease-in-out;
+  z-index: 9; /* Lower z-index for the menu */
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+nav li {
+  margin: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--color-green);
+}
+
+/* Show/Hide menu */
+.hidden {
+  transform: scaleY(0);
+}
+
+.visible {
+  transform: scaleY(1);
+}
+  </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Power to the Moms</h1>
-        <p>Empowering mothers with diverse abilities and skills</p>
-    </header>
+  <header>
+    <div>
+        <span class="red">The</span>
+        <br>
+        <span class="good">Good</span>
+        <br>
+        <span class="red">People</span>
+    </div>
+    <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+  </header>
 
-    <!-- About this Initiative Section -->
-    <section class="about">
-        <div class="container">
-            <h2>About this Initiative</h2>
-            <p>Being a mom is tough and even tougher for moms with children of diverse abilities. This initiative supports these mothers by offering them opportunities to learn a new skill, freelance, and provide them with another income stream.</p>
-        </div>
-    </section>
+<div class="index">
+  <div class="button-container">
+    <!-- Button 1 -->
+    <button class="dotted-button left1">who are we?</button>
 
-    <!-- What We Do Section -->
-    <section class="what-we-do">
-        <div class="container">
-            <h2>What We Do</h2>
-            <h3>Train the Trainers</h3>
-            <p>We provide specialized training to moms to empower them with new skills that they can share with others. These skills open doors to freelancing opportunities and sustainable income streams for their families.</p>
-        </div>
-    </section>
+    <!-- Button 2 -->
+    <button class="dotted-button right1">what we do</button>
 
-    <!-- Get Involved Section -->
-    <section class="get-involved">
-        <div class="container">
-            <h2>Get Involved</h2>
-            <p>Know of someone who can benefit from this programme? Reach out to us at <a href="mailto:xxxx@example.com">xxxx@example.com</a>.</p>
-            <p>Support our efforts by engaging us in your corporate get-togethers, and meet our moms who will be facilitating the sessions!</p>
-            <p>Purchase items made by our moms here: <a href="shop-link.html">Shop Now</a></p>
-        </div>
-    </section>
+    <!-- Button 3 -->
+    <button class="dotted-button right2">our initiatives</button>
+  </div>
+</div>
 
-    <!-- Hear from Our Moms Section -->
-    <section class="hear-from-moms">
-        <div class="container">
-            <h2>Hear from Our Moms!</h2>
-            <p>Our moms are the heart of this initiative. Hear their stories, their experiences, and how this program has helped them transform their lives.</p>
-            <!-- Add a video or testimonial section here -->
-            <div class="testimonials">
-                <p>"This initiative has given me the confidence to provide for my family in ways I never thought possible!" - A Mom</p>
-                <p>"The skills I've learned have opened new career paths that I’m truly passionate about!" - Another Mom</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Power to the Moms | All Rights Reserved</p>
-    </footer>
-
+  <script src="index.js"></script>
 </body>
 </html>
