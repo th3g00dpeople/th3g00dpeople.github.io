@@ -32,14 +32,14 @@
 <body>
 
 
-    <header>
-        <div>
-                <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="img/logo.jpg" style="width: 120px; height: 120px; object-fit: contain; >
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+    <div style="flex: 1;">
+        <a href="index.html" class="logo">
+            <img src="img/logo.jpg" alt="Logo" style="width: 100px; height: 100px; object-fit: contain;">
         </a>
-        </div>
-        <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+    </div>
+    <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()" style="font-size: 24px; cursor: pointer; flex-shrink: 0;">
+        &#9776; <!-- Hamburger icon -->
       </header>
       
       <nav id="nav-menu" class="hidden">
