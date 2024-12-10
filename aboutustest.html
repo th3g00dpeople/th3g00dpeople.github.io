@@ -6,16 +6,16 @@
   <title>About Us</title>
   <meta property="og:image" content="assets/img/favicon.png" /> 
   <meta name="description" content="Centre for Human Animal Connection (CHAC) tailors animal-assisted interventions (AAIs) for children, youths, and adults from...">
-  <meta property="og:title" content="Centre for Human Animal Connection (CHAC): Equiping Workshops for children, youths and adults.."/> 
+  <meta property="og:title" content="Centre for Human Animal Connection (CHAC): Equipping Workshops for children, youths and adults.." /> 
   <meta name="og:description" content="Centre for Human Animal Connection (CHAC) tailors animal-assisted interventions (AAIs) for children, youths, and adults from..."/> 
-  <meta property="og:image" content="Centre for Human Animal Connection (CHAC): Equiping Workshops for children, youths and adults." />
+  <meta property="og:image" content="Centre for Human Animal Connection (CHAC): Equipping Workshops for children, youths and adults." />
 
   <!-- Favicons -->
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
@@ -28,11 +28,44 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .content {
+      text-align: center;
+      margin-top: 20vh;
+      color: #d9534f; /* Red color for the text */
+    }
+    .content p {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .social-media {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .social-media a {
+      text-decoration: none;
+      color: #d9534f;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .social-media a:hover {
+      color: #c9302c; /* Darker red on hover */
+    }
+    .social-media img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
 </head>
 <body>
-
-
-<header style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
     <div style="flex: 1;">
         <a href="index.html" class="logo">
             <img src="img/logo.png" alt="Logo" style="width: 100px; height: 100px; object-fit: contain;">
@@ -40,129 +73,112 @@
     </div>
     <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()" style="font-size: 24px; cursor: pointer; flex-shrink: 0;">
         &#9776; <!-- Hamburger icon -->
-      </header>
+    </div>
+  </header>
       
-      <nav id="nav-menu" class="hidden">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="our-initiative.html">Our Initiative</a></li>
-          <li><a href="media.html">As Seen on the Media</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </nav>
-    <main>
+  <nav id="nav-menu" class="hidden">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="our-initiative.html">Our Initiative</a></li>
+      <li><a href="media.html">As Seen on the Media</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </nav>
 
-        <!-- about us -->
-        <div class="aboutheader">
-            <div class="container">
-                <section class="aboutsection">
-                    <div class="aboutcontent">
-                    <h2>About The <br> Good People</h2>
-                    </div>
-                    <div class="aboutcontent">
-                    <br>
-                    <b>Why did we set up The Good People?</b>
-                    <p>We just wanted to do good things for everyone- the animals, the environment, fellow human beings. We realised that when people do good, they feel good, and they do more good things. So why not make the world a better place by doing good? - Spreading positivity, helping others, and standing up for what's right. #goodvibesonly</p>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- Our Mission -->
-         <section class="our-mission">
-            <div class="container">
-                <div class="section">
-                    <h2>Our Mission</h2>
-                    <p>
-                        To do good, help other individuals do good, and inspire the next generation of changemakers.
-                    </p>
-                </div>
-            </div>
-    
-         </section>
-
-        <!-- Our Story -->
-        <section class="our-story">
-            <div class="container">
-                <div class="section">
-                    <h2>Our Story</h2>
-                    <p>
-Established in 2022, we began our journey working with youth at risk and individuals with a history of incarceration. 
-                      We have come a long way. From introducing befrienders and animal-assisted activities into our sessions to equipping beneficiaries with skills [in other sectors] that empower them 
-                      to contribute positively to the environment, animals, and their communities, we’ve grown to offer even more opportunities, including part-time internships.
-<br><br>
-Today, our reach has expanded to a diverse range of demographics, including youth-at-risk, stay-at-home moms, seniors, students, and youth in general for skill-building and character development.
-                      We also work with preschoolers and students from lower-income communities, ensuring our initiatives create meaningful opportunities for all.
-                      to 
-                    </p>
-                </div>
-            </div>
-    
+  <main>
+    <!-- About Us -->
+    <div class="aboutheader">
+      <div class="container">
+        <section class="aboutsection">
+          <div class="aboutcontent">
+            <h2>About The <br> Good People</h2>
+          </div>
+          <div class="aboutcontent">
+            <b>Why did we set up The Good People?</b>
+            <p>We just wanted to do good things for everyone—the animals, the environment, fellow human beings. We realized that when people do good, they feel good, and they do more good things. So why not make the world a better place by doing good? - Spreading positivity, helping others, and standing up for what's right. #goodvibesonly</p>
+          </div>
         </section>
+      </div>
+    </div>
 
-        <!-- Our Partners -->
-        <section class="our-partner">
-            <div class="container">
-                <div class="section">
-                        <h2 class="partner-title">Our Partners</h2>
-                        <div class="partners-container">
-                            <!-- Replace with your image URLs -->
-                            <div class="partner-logo">
-                              <img src="assets/img/tgeslogo.png">
-                            </div>
-                            <div class="partner-logo">
-                              <img src="assets/img/awalogo.png">
-                            </div>
-                            <div class="partner-logo">
-                              <img src="assets/img/ccwlogo.png">
-                            </div>
-                            <div class="partner-logo">
-                              <img src="assets/img/terralogo.png">
-                            </div>
-                            <div class="partner-logo">
-                              <img src="assets/img/tgclogo.png">
-                            </div>
-                            <div class="partner-logo">
-                              <img src="assets/img/chaclogo.png">
-                            </div>
- 
+    <!-- Our Mission -->
+    <section class="our-mission">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>To do good, help other individuals do good, and inspire the next generation of changemakers.</p>
+      </div>
+    </section>
 
-                          </div>
-                </div>
-            </div>
-        </section>
+    <!-- Our Story -->
+    <section class="our-story">
+      <div class="container">
+        <h2>Our Story</h2>
+        <p>Established in 2022, we began our journey working with youth at risk and individuals with a history of incarceration. From introducing befrienders and animal-assisted activities to equipping beneficiaries with skills, we’ve grown to offer more opportunities, including part-time internships. Today, our reach spans youth-at-risk, stay-at-home moms, seniors, students, and beyond, ensuring our initiatives create meaningful opportunities for all.</p>
+      </div>
+    </section>
 
-        <!-- Meet the Team -->
-        <div class="container">
-            <div class="section">
-                <h2>Meet Our Team</h2>
-                <div class="team">
-                    <div class="team-member">
-                              <img src="assets/img/wen.png">
-                        <h3>Wen Yun</h3>
- <p>Founder <br>The Good Earth School </p>                
-                    </div>
-                    <div class="team-member">
-                              <img src="assets/img/ariessa.png">
-                        <h3>Ariessa Koh</h3>
- <p>Founder <br>The Good Co. </p>                
-                    </div>
-                    <div class="team-member">
-                              <img src="assets/img/aifa.png">
-                        <h3>Coach Aifa</h3>
- <p>Founder <br>Terra Academy</p>                
-                                          <div class="team-member">
-                              <img src="assets/img/john.png">
-                        <h3>John</h3>
- <p>Just a human trying to do good.</p>          
-                    </div>
-                </div>
-            </div>
+    <!-- Our Partners -->
+    <section class="our-partner">
+      <div class="container">
+        <h2 class="partner-title">Our Partners</h2>
+        <div class="partners-container">
+          <div class="partner-logo"><img src="assets/img/tgeslogo.png"></div>
+          <div class="partner-logo"><img src="assets/img/awalogo.png"></div>
+          <div class="partner-logo"><img src="assets/img/ccwlogo.png"></div>
+          <div class="partner-logo"><img src="assets/img/terralogo.png"></div>
+          <div class="partner-logo"><img src="assets/img/tgclogo.png"></div>
+          <div class="partner-logo"><img src="assets/img/chaclogo.png"></div>
         </div>
-        
-    </main>
-     
+      </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="meet-team">
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team">
+          <div class="team-member">
+            <img src="assets/img/wen.png">
+            <h3>Wen Yun</h3>
+            <p>Founder<br>The Good Earth School</p>
+          </div>
+          <div class="team-member">
+            <img src="assets/img/ariessa.png">
+            <h3>Ariessa Koh</h3>
+            <p>Founder<br>The Good Co.</p>
+          </div>
+          <div class="team-member">
+            <img src="assets/img/aifa.png">
+            <h3>Coach Aifa</h3>
+            <p>Founder<br>Terra Academy</p>
+          </div>
+          <div class="team-member">
+            <img src="assets/img/john.png">
+            <h3>John</h3>
+            <p>Just a human trying to do good.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Text Section -->
+    <div class="content">
+        <p>hi there! We are a bunch of humans planting seeds of kindness<br>to build a kinder future for all kinds.</p>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="instagram-icon.png" alt="Instagram"> Instagram
+        </a>
+        <a href="mailto:example@example.com">
+            <img src="email-icon.png" alt="Email"> Email Us
+        </a>
+    </div>
+  </main>
+  
   <script src="index.js"></script>
 </body>
 </html>
+
