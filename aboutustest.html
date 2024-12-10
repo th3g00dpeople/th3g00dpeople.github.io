@@ -209,6 +209,31 @@ Today, our reach has expanded to a diverse range of demographics, including yout
             text-align: right; /* Align contact us to the right */
             width: 50%; /* Adjust width of contact block */
         }
+              .contact-us a {
+            color: #d9534f;
+            font-size: 24px;  /* Set the icon size */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .contact-us a:hover {
+            color: #c9302c;  /* Darker color on hover */
+        }
+
+        /* Styling for the custom social media icons */
+        .contact-us img {
+            width: 40px; /* Icon size */
+            height: 40px; /* Icon size */
+            border-radius: 50%; /* Make the icon circular */
+            border: 2px solid #d9534f; /* Optional: adds a border around the icon */
+            padding: 5px; /* Padding inside the icon */
+            transition: transform 0.3s ease; /* Smooth transform on hover */
+        }
+
+        .contact-us img:hover {
+            transform: scale(1.1); /* Slightly enlarge the icon on hover */
+        }
+
+      
 
         /* Styling for the social media section */
         .social-media {
@@ -256,19 +281,18 @@ Today, our reach has expanded to a diverse range of demographics, including yout
         <!-- Right content (Contact Us) -->
         <div class="contact-us">
             Contact Us
-      <a href="https://www.linkedin.com/company/centre-hac/" target="_blank">
-            <i class="bi bi-linkedin"></i>
-        </a>
+            <a href="https://www.linkedin.com/company/centre-hac/" target="_blank">
+                <img src="img/linkedin-logo.png" alt="LinkedIn Logo">
+            </a>
 
-        <!-- Instagram Icon -->
-        <a href="https://www.instagram.com/chac.sg/" target="_blank">
-            <i class="bi bi-instagram"></i>
-        </a>
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/chac.sg/" target="_blank">
+                <img src="img/instagram-logo.png" alt="Instagram Logo">
+            </a>
 
-        <!-- Email Icon -->
-        <a href="mailto:example@example.com">
-            <i class="bi bi-envelope"></i>
-        </a>
+            <!-- Email Icon -->
+            <a href="mailto:example@example.com">
+                <img src="img/email-logo.png" alt="Email Logo">
        </div>
 </body>
 </html>
