@@ -10,16 +10,40 @@
             background-color: #f7e2c5; /* Background color similar to your design */
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .content {
-            text-align: center;
+
+        /* Main container for the content */
+        .main-container {
+            width: 90%;
             margin-top: 20vh;
+            display: flex;
+            justify-content: space-between; /* Justify content on both sides */
+            align-items: center;
+        }
+
+        /* Styling for the left content */
+        .content {
             color: #d9534f; /* Red color for the text */
-        }
-        .content p {
-            font-size: 20px;
+            font-size: 24px;
             line-height: 1.5;
+            text-align: left;
+            width: 50%; /* Adjust width of text block */
         }
+
+        /* Contact Us and social media section */
+        .contact-us {
+            font-weight: bold;
+            font-size: 18px;
+            color: #d9534f;
+            text-decoration: underline dotted;
+            text-align: right; /* Align contact us to the right */
+            width: 50%; /* Adjust width of contact block */
+        }
+
+        /* Styling for the social media section */
         .social-media {
             position: fixed;
             bottom: 20px;
@@ -27,57 +51,55 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-        }
-        .social-media a {
-            text-decoration: none;
-            color: #d9534f;
             font-size: 16px;
-            font-weight: bold; /* Bold "Contact Us" text */
+        }
+
+        .social-media a {
+            color: #d9534f;
+            text-decoration: none;
             display: flex;
             align-items: center;
+            font-weight: bold;
             gap: 8px;
         }
+
         .social-media a:hover {
             color: #c9302c; /* Darker red on hover */
         }
+
         .social-media a::after {
             content: " . . . "; /* Dotted underline */
-            display: inline-block;
-            margin-left: 5px;
             color: #d9534f;
         }
+
         .social-media img {
             width: 24px;
             height: 24px;
         }
-        .contact-us {
-            font-weight: bold; /* Bold "Contact Us" text */
-            font-size: 18px;
-            color: #d9534f;
-            text-decoration: underline dotted;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
-    <div class="content">
-        <p>hi there! We are a bunch of humans planting seeds of kindness<br>to build a kinder future for all kinds.</p>
+    <!-- Main content container -->
+    <div class="main-container">
+        <!-- Left content (text) -->
+        <div class="content">
+            <p>hi there! We are a bunch of humans planting seeds of kindness<br>to build a kinder future for all kinds.</p>
+        </div>
+
+        <!-- Right content (Contact Us) -->
+        <div class="contact-us">
+            Contact Us
+        </div>
     </div>
 
-    <div class="contact-us">
-        Contact Us
-    </div>
-
+    <!-- Social Media Links Section -->
     <div class="social-media">
         <a href="https://www.instagram.com" target="_blank">
-            <img src="instagram-icon.png" alt="Instagram"> Instagram
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
         </a>
         <a href="mailto:example@example.com">
-            <img src="email-icon.png" alt="Email"> Email Us
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Email_icon.png" alt="Email"> Email Us
         </a>
     </div>
 </body>
 </html>
-
-
