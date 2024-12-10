@@ -3,19 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Good People</title>
+  <title>About Us</title>
+  <meta property="og:image" content="assets/img/favicon.png" /> 
+  <meta name="description" content="The Good People (TGP) tailors programmes to empower, equip, and inspire diverse communities, including youth-at-risk, SPED students, teenage moms, stay-at-home moms, and seniors. Through workshops ranging from mental well-being to sustainable living, with a strong emphasis on social sustainability and inclusivity, TGP fosters personal growth, builds skill sets, and creates part-time job opportunities. Guided by the simple ethos of - just doing good - TGP is dedicated to nurturing knowledge, resilience, and meaningful connections for a brighter future.">
+  <meta property="og:title" content="The Good People (TGP) tailors programmes to empower, equip, and inspire diverse communities, including youth-at-risk, SPED students, teenage moms, stay-at-home moms, and seniors. Through workshops ranging from mental well-being to sustainable living, with a strong emphasis on social sustainability and inclusivity, TGP fosters personal growth, builds skill sets, and creates part-time job opportunities. Guided by the simple ethos of - just doing good - TGP is dedicated to nurturing knowledge, resilience, and meaningful connections for a brighter future."/> 
+  <meta name="og:description" content="The Good People (TGP) tailors programmes to empower, equip, and inspire diverse communities, including youth-at-risk, SPED students, teenage moms, stay-at-home moms, and seniors. Through workshops ranging from mental well-being to sustainable living, with a strong emphasis on social sustainability and inclusivity, TGP fosters personal growth, builds skill sets, and creates part-time job opportunities. Guided by the simple ethos of - just doing good - TGP is dedicated to nurturing knowledge, resilience, and meaningful connections for a brighter future."/> 
+  <meta property="og:image" content="The Good People (TGP) tailors programmes to empower, equip, and inspire diverse communities, including youth-at-risk, SPED students, teenage moms, stay-at-home moms, and seniors. Through workshops ranging from mental well-being to sustainable living, with a strong emphasis on social sustainability and inclusivity, TGP fosters personal growth, builds skill sets, and creates part-time job opportunities. Guided by the simple ethos of - just doing good - TGP is dedicated to nurturing knowledge, resilience, and meaningful connections for a brighter future." />
+
+  <!-- Favicons -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
   <link rel="stylesheet" href="index.css">
 </head>
 <body class="body-image">
-    <header>
-        <div>
-            <span class="red">The</span>
-            <br>
-            <span class="good">Good</span>
-            <br>
-            <span class="red">People</span>
-        </div>
-        <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+    <div style="flex: 1;">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo" style="width: 100px; height: 100px; object-fit: contain;">
+        </a>
+    </div>
+    <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()" style="font-size: 24px; cursor: pointer; flex-shrink: 0;">
+        &#9776; <!-- Hamburger icon -->
       </header>
       
       <nav id="nav-menu" class="hidden">
@@ -27,7 +41,7 @@
           <li><a href="#">FAQ</a></li>
         </ul>
       </nav>
-
+</div>
   <div class="index">
     <div class="button-container">
         <!-- Button 1 -->
