@@ -7,6 +7,37 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Gallery CSS */
+    .isotope-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+      grid-gap: 20px; /* Spacing between items */
+    }
+
+    .portfolio-item img {
+      width: 100%; /* Makes images responsive */
+      height: auto;
+      border-radius: 8px; /* Adds rounded corners */
+    }
+
+    .portfolio-info {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .isotope-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .isotope-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+      }
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -17,10 +48,10 @@
             <br>
             <span class="red">People</span>
         </div>
-        <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
-      </header>
+        <div class="menu-icon red" id="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </header>
       
-      <nav id="nav-menu" class="hidden">
+    <nav id="nav-menu" class="hidden">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -28,9 +59,10 @@
           <li><a href="media.html">As Seen on the Media</a></li>
           <li><a href="#">FAQ</a></li>
         </ul>
-      </nav>
+    </nav>
+
     <main>
-        <!-- about Media -->
+        <!-- About Media -->
         <div class="container">
             <section class="aboutsection">
                 <div class="aboutcontent">
@@ -79,7 +111,6 @@
             <div class="container section">
                 <h2>Hear from Our Moms!</h2>
                 <p>Our moms are the heart of this initiative. Hear their stories, their experiences, and how this program has helped them transform their lives.</p>
-                <!-- Add a video or testimonial section here -->
                 <div class="testimonials">
                     <p>"This initiative has given me the confidence to provide for my family in ways I never thought possible!" - A Mom</p>
                     <p>"The skills I've learned have opened new career paths that I’m truly passionate about!" - Another Mom</p>
@@ -87,160 +118,127 @@
             </div>
         </section>
 
-      
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container" style="padding: 50px; width: 100%;">
-        <div style="display: flex; justify-content: space-between; width: 100%;">
-            <!-- Left Section: Patreon Text -->
-            <h1 style="color: black"><b>Our Gallery</b></h1>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section">
+          <div class="container" style="padding: 50px; width: 100%;">
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+              <h1 style="color: black"><b>Our Gallery</b></h1>
+            </div>
+            <br><br>
+
+            <div class="isotope-container">
+              <!-- Row 1 -->
+              <div class="portfolio-item">
+                <img src="assets/img/photo-1.jpg" class="img-fluid" alt="Workshop 1">
+                <div class="portfolio-info">
+                  <h4>Biodiversity Workshop</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-2.jpg" class="img-fluid" alt="Workshop 2">
+                <div class="portfolio-info">
+                  <h4>Biodiversity Workshop</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-3.jpg" class="img-fluid" alt="Workshop 3">
+                <div class="portfolio-info">
+                  <h4>Plastic Recycling Workshop</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-4.jpg" class="img-fluid" alt="Workshop 4">
+                <div class="portfolio-info">
+                  <h4>Wildlife Coexistence Workshop</h4>
+                </div>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="portfolio-item">
+                <img src="assets/img/skm2024.jpg" class="img-fluid" alt="Workshop 5">
+                <div class="portfolio-info">
+                  <h4>Supporting SRC with Sustainability Workshops</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-6.jpg" class="img-fluid" alt="Workshop 6">
+                <div class="portfolio-info">
+                  <h4>Recycled Paper x Biod Workshop</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-7.jpg" class="img-fluid" alt="Workshop 7">
+                <div class="portfolio-info">
+                  <h4>Glass Recycling Workshop</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-8.png" class="img-fluid" alt="Workshop 8">
+                <div class="portfolio-info">
+                  <h4>Urban Cleanup</h4>
+                </div>
+              </div>
+
+              <!-- Row 3 -->
+              <div class="portfolio-item">
+                <img src="assets/img/photo-9.png" class="img-fluid" alt="Workshop 9">
+                <div class="portfolio-info">
+                  <h4>Animal Care Workshop</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-10.jpg" class="img-fluid" alt="Workshop 10">
+                <div class="portfolio-info">
+                  <h4>Insight to a Vet's Life Workshop</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-11.jpg" class="img-fluid" alt="Workshop 11">
+                <div class="portfolio-info">
+                  <h4>Plastic x Biod Booth</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-12.jpg" class="img-fluid" alt="Workshop 12">
+                <div class="portfolio-info">
+                  <h4>Hamster Care Workshop</h4>
+                </div>
+              </div>
+
+              <!-- Row 4 -->
+              <div class="portfolio-item">
+                <img src="assets/img/photo-13.jpg" class="img-fluid" alt="Workshop 13">
+                <div class="portfolio-info">
+                  <h4>Assembly Talk</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-14.jpg" class="img-fluid" alt="Workshop 14">
+                <div class="portfolio-info">
+                  <h4>Inquiry-Based Learning about Animals</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-15.jpg" class="img-fluid" alt="Workshop 15">
+                <div class="portfolio-info">
+                  <h4>Plastic Recycling</h4>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/img/photo-16.jpg" class="img-fluid" alt="Workshop 16">
+                <div class="portfolio-info">
+                  <h4>Plastic Recycling</h4>
+                </div>
+              </div>
+            </div>
           </div>
-          <br><br>
-
-        <div class="container">
-            <section class="aboutsection">
-                <div class="aboutcontent">
-                    <br><br>
-                    <div>
-                        <h2 style="color: var(--color-red);">Our Gallery</h2>
-
-                    </div>
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="row gy-4 isotope-container" >
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Biodiversity Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Biodiversity Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Plastic Recycling Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Wildlife Coexistence Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/skm2024.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Supporting SRC with Sustainability Workshops</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Recycled Paper x Biod Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Glass Recycling Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-8.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Urban Cleanup</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-9.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Animal Care Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-10.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Insight to a Vet's Life Workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-11.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Plastic x Biod Booth</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-12.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Hamster care workshop</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-13.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Assembly Talk</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-14.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Inquiry-Based Learning about Animals</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-15.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Plastic Recycling</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-3 col-md-6 portfolio-item port-gaps isotope-item filter-app">
-              <img src="assets/img/photo-16.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Plastic Recycling</h4>
-                <a href="img/senioraai.png"></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-
-          </div><!-- End Portfolio Container -->
+        </section>
     </main>
      
+  <script src="index.js"></script>
+</body>
+</html>
+
   <script src="index.js"></script>
 </body>
 </html>
