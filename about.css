@@ -159,8 +159,19 @@ Team
         flex: 1 1 calc(50% - 20px); /* Two columns */
     }
 }
-@media (max-width: 480px) {
-    .team-member {
-        flex: 1 1 100%; /* One column */
-    }
+
+/* =
+Gallery
+==== */
+.isotope-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-gap: 20px; /* Adjust spacing between items */
+  justify-items: center; /* Center align the content */
+  align-items: center;
+}
+
+.portfolio-item {
+  width: 100%; /* Ensure the item fits within its column */
+  max-width: 200px; /* Optional: Set a max width for the items */
 }
