@@ -166,12 +166,16 @@ Gallery
 .isotope-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  grid-gap: 20px; /* Adjust spacing between items */
-  justify-items: center; /* Center align the content */
-  align-items: center;
+  grid-gap: 20px; /* Space between items */
 }
 
-.portfolio-item {
-  width: 100%; /* Ensure the item fits within its column */
-  max-width: 200px; /* Optional: Set a max width for the items */
+.portfolio-item img {
+  width: 100%; /* Make images responsive */
+  height: auto;
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.portfolio-info {
+  text-align: center;
+  margin-top: 10px;
 }
