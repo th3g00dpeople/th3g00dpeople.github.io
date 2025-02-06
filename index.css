@@ -188,6 +188,30 @@ Root Colors
     transform: scaleY(1);
   }
 
+  /* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+  height: 12px; /* Adjust the height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-yellow); /* Color of the background of the scrollbar */
+  border-radius: 10px; /* Optional: round the corners of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-red); /* Color of the thumb (scroll handle) */
+  border-radius: 10px; /* Optional: round the corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-green); /* Darker color when hovering over the thumb */
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-red); /* Color for the corner where the horizontal and vertical scrollbars meet */
+}
+
   /* Contact-us */
 
       /* Main container for the content */
@@ -280,3 +304,4 @@ Root Colors
         width: 24px;
         height: 24px;
     }
+
