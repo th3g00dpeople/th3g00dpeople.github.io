@@ -119,7 +119,7 @@ html, body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
   transition: transform 0.25s ease, opacity 0.3s ease;
   opacity: 1;
-  height: 260px; /* fixed container height */
+  height: 300px; /* fixed container height */
   display: flex;
 }
 
