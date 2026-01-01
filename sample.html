@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Article Page – The Good People</title>
+<style>
+/* ================================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+  width: 100%;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a1f44;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ff69b4;
+}
+
+/* HAMBURGER */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  width: 30px;
+  height: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #fff;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-toggle-label span::before { content: ""; position: absolute; top: -8px; }
+.nav-toggle-label span::after { content: ""; position: absolute; top: 8px; }
+
+.nav-toggle:checked + .nav-toggle-label span { background: transparent; }
+.nav-toggle:checked + .nav-toggle-label span::before { top: 0; transform: rotate(45deg); }
+.nav-toggle:checked + .nav-toggle-label span::after { top: 0; transform: rotate(-45deg); }
+.nav-toggle:checked ~ .nav-links { display: flex; flex-direction: column; gap: 15px; background: rgba(0,0,0,0.8); padding: 15px; border-radius: 8px; position: absolute; top: 60px; right: 20px; }
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle-label { display: flex; }
+}
+
+/* ================================
+   ARTICLE SECTION
+================================ */
+.article-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.article-header {
+  margin-bottom: 25px;
+}
+
+.article-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.article-header .author {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.article-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.article-content p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.article-content h2 {
+  font-size: 28px;
+  margin: 20px 0 12px;
+  font-weight: 600;
+}
+
+.article-content img.inline-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.site-footer {
+  background-color: #0a1f44;
+  color: #fff;
+  padding: 60px 20px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-container h3 { margin-bottom: 15px; color: #fff; }
+.footer-container p, .footer-container li, .footer-container a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+.footer-links ul { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a:hover, .footer-contact a:hover, .footer-social a:hover { color: #ff69b4; }
+.footer-social { margin-top: 10px; display: flex; gap: 15px; }
+.footer-bottom { margin-top: 40px; text-align: center; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; color: #ccc; }
+
+/* RESPONSIVE ARTICLE */
+@media (max-width: 768px) {
+  .article-image { height: 250px; }
+  .article-content h2 { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-logo">The Good People</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+    <nav class="nav-links">
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+    </nav>
+</header>
+
+<main class="article-container">
+
+    <div class="article-header">
+        <h1>The Importance of Sustainable Living</h1>
+        <div class="author">By The Good People – January 1, 2026</div>
+    </div>
+
+    <img src="./img/pgh.jpg" alt="Sustainable Living" class="article-image">
+
+    <div class="article-content">
+        <p>Sustainable living is about making choices that reduce your environmental impact and help preserve natural resources for future generations.</p>
+
+        <h2>Why It Matters</h2>
+        <p>Choosing sustainable products and practices can significantly reduce waste, conserve energy, and promote a healthier lifestyle. Simple steps like reducing single-use plastics, composting, and mindful consumption make a big difference.</p>
+
+        <img src="./img/pgh.jpg" alt="Eco Practices" class="inline-img">
+
+        <h2>Getting Started</h2>
+        <p>Start small by evaluating your daily habits. Implementing eco-friendly alternatives in your kitchen, bathroom, and office can gradually lead to a more sustainable lifestyle.</p>
+
+        <p>Learn more by attending local workshops, joining community groups, and exploring online resources that focus on wellness and sustainable living.</p>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>The Good People</h3>
+            <p>We are committed to creating meaningful projects that inspire and connect communities.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@thegoodpeople.com">info@thegoodpeople.com</a></p>
+            <p>Phone: +65 1234 5678</p>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 The Good People. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
