@@ -1,0 +1,307 @@
+/* ========
+Root Colors
+=========== */
+:root {
+  --color-yellow: #f7dfae;
+  --color-blue: #BADEFC;
+  --color-green: #56876D;
+  --color-red: #D95D39;
+  --color-navy: #283845;
+}
+
+  
+  /* ===========
+  Default Styles
+  ============== */
+  a {
+    text-decoration: none;
+    color: var(--color-yellow);
+  }
+  
+  .body-image {
+    background-image: url('./img/index.png'); /* Replace with your background image */
+    background-size: cover; /* Makes sure the image covers the entire element */
+    background-position: center center; /* Centers the image in the element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    
+  }
+  
+  
+  /* Background and text colors */
+  body {
+    background-color: var(--color-yellow);
+    color: var(--color-navy);
+    font-family: Arial, sans-serif;
+  }
+
+  /* ==========
+  Index content
+  ============= */
+  .index{
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for centralizing the container */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+  }
+
+  /* Container for Buttons */
+  .button-container {
+    position: relative;
+    width: 1200px; /* Adjust size as needed */
+    height: 800px; /* Adjust size as needed */
+    border: 0px solid red; /* Red border for the container */
+    border-radius: 10px; /* Optional: Rounded corners for the container */
+  }
+
+  /* General Styling for Buttons */
+  .dotted-button {
+    position: absolute; /* Absolute positioning for precise placement */
+    background: none;
+    border: 2px dashed #008080; /* Customize border color */
+    border-radius: 50%; /* Circular buttons */
+    width: 150px; /* Adjust button size */
+    height: 150px;
+    color: #008080; /* Text color */
+    text-align: center;
+    line-height: 150px; /* Center text vertically */
+    font-size: 16px; /* Text size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  /* Hover Effects for Buttons */
+  .dotted-button:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    color: #ff4500; /* Text color on hover */
+    border-color: #ff4500; /* Border color on hover */
+  }
+
+  /* Positioning for Each Button */
+  .left1 {
+    top: 26%; /* Adjust top positioning */
+    left: 18%; /* Adjust left positioning */
+  }
+
+  .right1 {
+    top: 38%; /* Adjust top positioning */
+    right: 0%; /* Adjust right positioning */
+  }
+
+  .right2 {
+    bottom: 30%; /* Adjust bottom positioning */
+    right: 5%; /* Adjust right positioning */
+  }
+
+  /* ================
+  Header and Nav Menu
+  =================== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-yellow);
+    color: var(--color-navy);
+    position: relative; /* Ensure it stays above the menu */
+    z-index: 10; /* Make sure the header stays above the menu */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .green {
+    color: var(--color-green);
+  }
+  
+  .red {
+    color: var(--color-red);
+  }
+  
+  /* Menu icon styling */
+  .menu-icon {
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--color-red);
+    transition: transform 0.2s ease;
+  }
+  
+  .menu-icon:hover {
+    transform: scale(1.1);
+    color: var(--color-green);
+  }
+  
+  /* Add styles for the menu icon in the cross state */
+  .menu-icon.cross {
+    color: var(--color-red); /* Optional: change the color of the cross */
+    font-size: 32px;
+  }
+  
+  /* Navigation menu */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease-in-out;
+    z-index: 9; /* Lower z-index for the menu */
+  }
+  
+  nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  nav li {
+    margin: 20px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--color-red);
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: var(--color-green);
+  }
+  
+  /* Show/Hide menu */
+  .hidden {
+    transform: scaleY(0);
+  }
+  
+  .visible {
+    transform: scaleY(1);
+  }
+
+  /* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+  height: 12px; /* Adjust the height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-yellow); /* Color of the background of the scrollbar */
+  border-radius: 10px; /* Optional: round the corners of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-red); /* Color of the thumb (scroll handle) */
+  border-radius: 10px; /* Optional: round the corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-green); /* Darker color when hovering over the thumb */
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-red); /* Color for the corner where the horizontal and vertical scrollbars meet */
+}
+
+  /* Contact-us */
+
+      /* Main container for the content */
+      .main-container {
+        width: 90%;
+        margin-top: 20vh;
+        display: flex;
+        justify-content: space-between; /* Justify content on both sides */
+        align-items: center;
+    }
+
+    /* Styling for the left content */
+    .bottom {
+        color: #d9534f; /* Red color for the text */
+      font-family: 'Montserrat', Arial, sans-serif;
+       font-weight: bold;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: left;
+        width: 60%; /* Adjust width of text block */
+      padding-left: 20px;
+    }
+
+    /* Contact Us and social media section */
+    .contact-us {
+      font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        color: #d9534f;
+        text-decoration: none;
+        text-align: right; /* Align contact us to the right */
+        width: 50%; /* Adjust width of contact block */
+    }
+          .contact-us a {
+        color: #d9534f;
+        font-size: 24px;  /* Set the icon size */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    .contact-us a:hover {
+        color: #c9302c;  /* Darker color on hover */
+    }
+
+    /* Styling for the custom social media icons */
+    .contact-us img {
+        width: 20px; /* Icon size */
+        height:20px; /* Icon size */
+        border-radius: 0%; /* Make the icon circular */
+        border: 0px solid #d9534f; /* Optional: adds a border around the icon */
+        padding: 0px; /* Padding inside the icon */
+        transition: transform 0.3s ease; /* Smooth transform on hover */
+    }
+
+    .contact-us img:hover {
+        transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    }
+
+  
+
+    /* Styling for the social media section */
+    .social-media {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .social-media a {
+        color: #d9534f;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        gap: 8px;
+    }
+
+    .social-media a:hover {
+        color: #c9302c; /* Darker red on hover */
+    }
+
+    .social-media a::after {
+        content: " . . . "; /* Dotted underline */
+        color: #d9534f;
+    }
+
+    .social-media img {
+        width: 24px;
+        height: 24px;
+    }
+
