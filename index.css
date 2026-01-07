@@ -503,7 +503,7 @@ html {
    FOOTER SECTION
 ================================ */
 .site-footer {
-  background-color: #0a1f44;
+  background-color: #353A4A;
   color: #fff;
   padding: 60px 20px 20px 20px;
   font-family: Arial, sans-serif;
@@ -690,7 +690,7 @@ html,body { width:100%; overflow-x:hidden; font-family:Arial,sans-serif; }
 
 /* ================= FOOTER ================= */
 .site-footer{
-  background:#0a1f44;color:#fff;padding:60px 20px 20px;
+  background:#353A4A;color:#fff;padding:60px 20px 20px;
   animation:footerFade 1.2s ease forwards;
 }
 @keyframes footerFade{
@@ -798,7 +798,7 @@ html,body { width:100%; overflow-x:hidden; font-family:Arial,sans-serif; }
     }
 
     /* ===== FOOTER ===== */
-    .site-footer{ background:#0a1f44; color:#fff; padding:60px 20px 20px; }
+    .site-footer{ background:#353A4A; color:#fff; padding:60px 20px 20px; }
     .footer-container{ display:flex; flex-wrap:wrap; gap:40px; max-width:1200px; margin:auto; justify-content:space-between; }
     .footer-bottom{text-align:center;margin-top:30px;font-size:13px;color:#ccc; }
 
