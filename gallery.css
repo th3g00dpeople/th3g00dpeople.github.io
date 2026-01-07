@@ -6,7 +6,7 @@
   --color-text-secondary: #555;       /* Secondary text (paragraphs) */
   --color-highlight: #000000;         /* Highlight text */
   --color-accent: #ED72C4;            /* Accent / active / hover color */
-  --color-overlay-bg: rgba(0,0,0,0.55); /* Overlay background */
+  --color-overlay-bg: #7d7c9d71; /* Overlay background */
   --color-overlay-text: #fff;         /* Overlay text */
 }
 
