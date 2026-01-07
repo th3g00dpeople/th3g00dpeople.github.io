@@ -12,7 +12,7 @@
      NAVBAR (OVERLAY HERO)
 ================================= -->
 <header class="navbar">
-  <div class="nav-logo">The Good People</div>
+  <div class="nav-logo" style="color: #f8d1dd!important;">The Good People</div>
 
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <label for="nav-toggle" class="nav-toggle-label">
@@ -34,7 +34,7 @@
   </div>
 
   <div class="hero-center">
-    <button class="hero-btn" onclick="location.href='TGP.html'">The Good Place</button>
+    <button class="hero-btn" onclick="location.href='TGP.html'" style="color: #f8d1dd !important; border: 1px solid #f8d1dd !important;">The Good Place</button>
     <div class="hero-star">✱</div>
     <button class="hero-btn" onclick="location.href='TGC.html'">The Good Co.</button>
   </div>
@@ -157,24 +157,40 @@
   </div>
 </footer>
 
-<!-- ================= JS ================= -->
-<script>
-const reveals = document.querySelectorAll('.reveal');
+    <!-- ================= JS ================= -->
+    <script>
+    const reveals = document.querySelectorAll('.reveal');
 
-function revealOnScroll() {
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
+    function revealOnScroll() {
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
 
-    if (elementTop < windowHeight - 120) {
-      el.classList.add('active');
+        if (elementTop < windowHeight - 120) {
+        el.classList.add('active');
+        }
+    });
     }
-  });
-}
 
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-</script>
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+    </script>
+    <script>
+    const navbar = document.querySelector('.navbar');
+    const navLogo = document.querySelector('.nav-logo');
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // scroll distance threshold
+        navbar.style.backgroundColor = '#f8d1dd'; // pink
+        navLogo.style.color = '#ffffff'; // white text
+    } else {
+        navbar.style.backgroundColor = 'transparent'; // original
+        navLogo.style.color = '#f8d1dd'; // original pink text
+    }
+    });
+    </script>
+
+
 
 </body>
 </html>
