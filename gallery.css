@@ -1,4 +1,16 @@
 /* ================================
+   COLOR VARIABLES
+================================ */
+:root {
+  --color-text-primary: #4D3D50;         /* Main text (titles, headings) */
+  --color-text-secondary: #555;       /* Secondary text (paragraphs) */
+  --color-highlight: #000000;         /* Highlight text */
+  --color-accent: #ED72C4;            /* Accent / active / hover color */
+  --color-overlay-bg: rgba(0,0,0,0.55); /* Overlay background */
+  --color-overlay-text: #fff;         /* Overlay text */
+}
+
+/* ================================
    GLOBAL RESET
 ================================ */
 * {
@@ -33,19 +45,19 @@ html, body {
 .gallery-name {
   max-width: 1000px;
   margin: 0 auto 20px;
-  padding: 0 20px; /* added side padding */
+  padding: 0 20px; /* side padding */
 }
 
 .gallery-name h1 {
   font-size: 42px;
   font-weight: 700;
-  color: #222;
+  color: var(--color-text-primary);
   line-height: 1.2;
   display: inline-block;
 }
 
 .gallery-name h1 .highlight {
-  color: #000000;
+  color: var(--color-highlight);
   padding: 0 10px;
   margin-left: -10px;
   border-radius: 4px;
@@ -62,19 +74,19 @@ html, body {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 0 20px; /* side padding */
+  padding: 0 20px;
 }
 
 .gallery-title-text h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #222;
+  color: var(--color-text-primary);
   font-family: "Courier New", Courier, monospace;
 }
 
 .gallery-title-text p {
   font-size: 16px;
-  color: #555;
+  color: var(--color-text-secondary);
   margin-top: 5px;
   font-family: "Courier New", Courier, monospace;
 }
@@ -88,7 +100,7 @@ html, body {
 .gallery-tab {
   font-size: 16px;
   font-weight: 500;
-  color: #000;
+  color: var(--color-highlight);
   cursor: pointer;
   position: relative;
   padding-bottom: 2px;
@@ -96,7 +108,7 @@ html, body {
 }
 
 .gallery-tab.active {
-  color: #353A4A;
+  color: var(--color-accent);
 }
 
 .gallery-tab.active::after {
@@ -106,11 +118,11 @@ html, body {
   bottom: 0;
   width: 100%;
   height: 3px;
-  background: #000000;
+  background: var(--color-accent);
 }
 
 .gallery-tab:hover:not(.active) {
-  color: #f8d1dd;
+  color: var(--color-accent);
 }
 
 /* ================================
@@ -120,9 +132,9 @@ html, body {
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible columns */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 0 20px; /* side padding */
+  padding: 0 20px;
   min-height: 800px;
   position: relative;
 }
@@ -138,16 +150,11 @@ html, body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
   height: 300px;
   display: flex;
-
-  /* animation */
   opacity: 0;
   animation: fadeUp 0.6s ease forwards;
-
-  /* smooth transitions */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* stagger animation */
 .gallery-item:nth-child(1) { animation-delay: 0.05s; }
 .gallery-item:nth-child(2) { animation-delay: 0.1s; }
 .gallery-item:nth-child(3) { animation-delay: 0.15s; }
@@ -158,7 +165,6 @@ html, body {
 .gallery-item:nth-child(8) { animation-delay: 0.4s; }
 .gallery-item:nth-child(9) { animation-delay: 0.45s; }
 
-/* hidden state (filtering) */
 .gallery-item.hidden {
   opacity: 0;
   pointer-events: none;
@@ -181,7 +187,7 @@ html, body {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: var(--color-overlay-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,7 +196,7 @@ html, body {
 }
 
 .overlay h3 {
-  color: #fff;
+  color: var(--color-overlay-text);
   font-size: 18px;
   transform: translateY(10px);
   opacity: 0;
