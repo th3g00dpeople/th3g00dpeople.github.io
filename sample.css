@@ -14,6 +14,13 @@ body {
   line-height: 1.6;
 }
 
+a {
+    color: #f8d1dd!important;
+}
+a:hover {
+    color: #353A4A!important;
+}
+
 /* ================================
    NAVBAR
 ================================ */

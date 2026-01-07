@@ -96,7 +96,7 @@ html, body {
 }
 
 .gallery-tab.active {
-  color: #000000;
+  color: #353A4A;
 }
 
 .gallery-tab.active::after {
@@ -110,7 +110,7 @@ html, body {
 }
 
 .gallery-tab:hover:not(.active) {
-  color: #0307ff;
+  color: #f8d1dd;
 }
 
 /* ================================
