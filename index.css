@@ -11,6 +11,11 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ================================
    NAVBAR (OVER HERO)
 ================================ */
@@ -109,10 +114,10 @@ html, body {
 /* MOBILE NAV */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; /* hide by default */
     flex-direction: column;
     gap: 15px;
-    background: rgba(0,0,0,0.7); /* semi-transparent bg on mobile */
+    background: rgba(0,0,0,0.8); /* semi-transparent bg on mobile */
     position: absolute;
     right: 20px;
     top: 70px;
@@ -120,14 +125,22 @@ html, body {
     border-radius: 12px;
     width: auto;
     max-width: 80%;
+    transition: all 0.3s ease; /* smooth open/close */
+    z-index: 1000;
   }
 
   .nav-toggle-label {
     display: flex;
+    cursor: pointer;
   }
 
   .nav-links a {
     font-size: 16px;
+  }
+
+  /* ONLY show nav-links when checkbox is checked */
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
   }
 }
 
