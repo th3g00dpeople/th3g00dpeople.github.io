@@ -164,3 +164,61 @@ body {
   .photo-gallery-section { padding: 100px 20px; }
   .gallery-header { flex-direction: column; align-items: flex-start; }
 }
+
+
+.site-footer {
+    padding: 60px 40px 30px;
+    background-color: #fff; /* pure white background */
+    border-top: 1px solid #eee;
+    font-family: "Courier New", Courier, monospace; /* typewriter font */
+    color: #000;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: flex-start; /* aligns everything to the left */
+    gap: 100px; /* space between Contact and See Our Work */
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.footer-col h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 20px; /* small icons like the picture */
+    filter: grayscale(100%); /* makes them black and white */
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: none;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+/* mobile fix */
+@media (max-width: 600px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
