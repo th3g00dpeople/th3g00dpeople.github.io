@@ -1,0 +1,166 @@
+/* ================================
+   1. GLOBAL & FONTS
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #121111;
+  font-family: "Courier New", Courier, monospace; /* typewriter vibe */
+  line-height: 1.5;
+}
+
+/* ================================
+   2. NAVBAR (Fixed & Minimal)
+================================ */
+.navbar {
+  width: 100%;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: white; /* kept clean white */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #121111;
+  text-decoration: none;
+  font-family: Arial, sans-serif; /* logo looks better in sans */
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #121111;
+  font-size: 15px;
+  text-transform: lowercase;
+}
+
+/* ================================
+   3. GALLERY HEADER
+================================ */
+.photo-gallery-section {
+  padding: 140px 40px 80px; /* space for fixed navbar */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-name h1 {
+  font-size: 42px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.gallery-name .highlight {
+  font-weight: bold;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-title-text h2 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.gallery-title-text p {
+  font-size: 15px;
+  max-width: 450px;
+}
+
+/* Underlined Tabs */
+.gallery-tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.gallery-tab {
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.gallery-tab.active {
+  font-weight: bold;
+  border-bottom: 2px solid #121111;
+}
+
+/* ================================
+   4. GALLERY GRID
+================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1; /* perfect squares */
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Simple Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #121111;
+}
+
+/* ================================
+   5. RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .photo-gallery-section { padding: 100px 20px; }
+  .gallery-header { flex-direction: column; align-items: flex-start; }
+}
