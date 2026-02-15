@@ -470,6 +470,12 @@ html {
   transition: transform 0.4s ease;
 }
 
+.gallery-item:hover .overlay {
+  background: rgba(255, 105, 180, 0.25);
+  cursor: pointer;
+
+}
+
 .gallery-item .overlay {
   position: absolute;
   top: 0;
@@ -478,6 +484,7 @@ html {
   height: 100%;
   background: rgba(255, 105, 180, 0);
   transition: background 0.4s ease;
+
 }
 
 .gallery-item:hover img {
@@ -487,6 +494,39 @@ html {
 .gallery-item:hover .overlay {
   background: rgba(255, 105, 180, 0.25);
   cursor: pointer;
+}
+
+.gallery-item:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-item .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay-text p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+.overlay-text h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.overlay-text {
+  color: #000;
+  max-width: 85%;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 /* RESPONSIVE */
