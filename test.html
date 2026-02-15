@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Good People | Sustainable Living & Wellness</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">The Good People</div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+        <nav class="nav-links">
+            <a href="index.html">home</a>
+            <a href="#about">about</a>
+            <a href="#projects">projects</a>
+            <a href="gallery.html">gallery</a>
+        </nav>
+    </header>
+
+    <section class="photo-gallery-section">
+
+        <div class="gallery-name">
+            <h1><span class="highlight">The Good</span> People</h1>
+        </div>
+
+        <div class="gallery-header">
+            <div class="gallery-title-text">
+                <h2>Hey,</h2>
+                <p>want to learn how to make some eco-conscious, cruelty-free, vegan stuff?</p>
+            </div>
+
+            <div class="gallery-tabs">
+                <span class="gallery-tab active" data-filter="all">All</span>
+                <span class="gallery-tab" data-filter="wellness">Wellness</span>
+                <span class="gallery-tab" data-filter="sustainable">Sustainable Living</span>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="wellness">
+                <img src="./img/pgh.jpg" alt="Wellness Workshop">
+                <div class="overlay"><h3>Wellness Workshop</h3></div>
+            </div>
+
+            <div class="gallery-item" data-category="wellness">
+                <img src="./img/pgh.jpg" alt="Mindfulness Session">
+                <div class="overlay"><h3>Mindfulness Session</h3></div>
+            </div>
+
+            <div class="gallery-item" data-category="sustainable">
+                <img src="./img/pgh.jpg" alt="Eco Living Talk">
+                <div class="overlay"><h3>Eco Living Talk</h3></div>
+            </div>
+
+            <div class="gallery-item" data-category="sustainable">
+                <img src="./img/pgh.jpg" alt="Urban Farming">
+                <div class="overlay"><h3>Urban Farming</h3></div>
+            </div>
+
+            <div class="gallery-item" data-category="wellness">
+                <img src="./img/pgh.jpg" alt="Yoga in Nature">
+                <div class="overlay"><h3>Yoga in Nature</h3></div>
+            </div>
+
+            <div class="gallery-item" data-category="sustainable">
+                <img src="./img/pgh.jpg" alt="Zero Waste">
+                <div class="overlay"><h3>Zero Waste Workshop</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>The Good People</h3>
+                <p>Doing good together. Committed to meaningful projects that inspire.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:hello@thegoodpeople.com">hello@thegoodpeople.com</a></p>
+                <div class="footer-social">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Good People. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Tab Filter Logic ---
+        const galleryTabs = document.querySelectorAll('.gallery-tab');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs and add to clicked tab
+                galleryTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+
+                galleryItems.forEach(item => {
+                    const category = item.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        // --- Simple Navbar Scroll Logic ---
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.background = '#ffffff';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+            } else {
+                navbar.style.background = 'transparent';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
