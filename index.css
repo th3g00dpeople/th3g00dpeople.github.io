@@ -458,27 +458,26 @@ html {
   gap: 25px;
 }
 
-/* individual tile */
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: none; /* removed the grey border */
+  box-shadow: none; /* removed the shadow */
+  transition: none; /* removed the lift effect */
 }
 
-/* image */
+/* image - UPDATED */
 .gallery-item img {
   width: 100%;
-  height: 350px;
+  aspect-ratio: 1 / 1; /* makes them perfect squares like the pic */
+  height: auto; /* override your 350px fixed height */
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
 }
 
-/* zoom on hover */
+/* remove the zoom effect */
 .gallery-item:hover img {
-  transform: scale(1.08);
+  transform: none; 
 }
 
 /* pink tint layer */
